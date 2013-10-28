@@ -27,8 +27,11 @@ gem 'coffee-rails', '~> 4.0.0'
 # Bootstrap-sass Gem
 gem 'bootstrap-sass', '~> 3.0.0.0.rc'
 
-
+# Added because not included in rails 3. ...
 gem 'protected_attributes'
+
+# Faker
+gem 'faker' 
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
