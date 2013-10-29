@@ -2,6 +2,7 @@
 
 Bloccit::Application.routes.draw do
 
+  devise_for :users
   resources :posts
 
   match "about" => 'welcome#about', via: :get
@@ -15,6 +16,7 @@ end
 #####    OLD
 
 # Bloccit::Application.routes.draw do
+#  devise_for :users
 #   get "posts/index"
 #   get "posts/show"
 #   get "posts/new"

@@ -33,6 +33,12 @@ gem 'protected_attributes'
 # Faker
 gem 'faker' 
 
+# Authentication system
+gem 'devise'
+
+# New Relic
+# gem 'newrelic_rpm'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
