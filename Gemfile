@@ -36,6 +36,9 @@ gem 'faker'
 # Authentication system
 gem 'devise'
 
+# Cancan (for Authorizations)
+gem 'cancan'
+
 # New Relic
 # gem 'newrelic_rpm'
 
