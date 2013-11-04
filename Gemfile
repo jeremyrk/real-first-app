@@ -39,6 +39,9 @@ gem 'devise'
 # Cancan (for Authorizations)
 gem 'cancan'
 
+# Markdown
+gem 'redcarpet'
+
 # New Relic
 # gem 'newrelic_rpm'
 
@@ -62,6 +65,7 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
