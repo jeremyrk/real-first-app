@@ -42,6 +42,19 @@ gem 'cancan'
 # Markdown
 gem 'redcarpet'
 
+# Carrierwave
+gem 'carrierwave'
+gem 'mini_magick'
+
+# Fog
+gem 'fog'
+
+# Handles credentials
+gem 'figaro'
+
+# gem to fix the 'rails g figaro:instal' WARNING
+gem 'unf'
+
 # New Relic
 # gem 'newrelic_rpm'
 
