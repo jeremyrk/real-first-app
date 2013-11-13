@@ -55,6 +55,9 @@ gem 'figaro'
 # gem to fix the 'rails g figaro:instal' WARNING
 gem 'unf'
 
+# Pagination
+gem 'will_paginate', '~> 3.0.5'
+
 # New Relic
 # gem 'newrelic_rpm'
 
