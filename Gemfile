@@ -58,6 +58,9 @@ gem 'unf'
 # Pagination
 gem 'will_paginate', '~> 3.0.5'
 
+# Facebook authentication
+gem 'omniauth-facebook'
+
 # New Relic
 # gem 'newrelic_rpm'
 
