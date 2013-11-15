@@ -2,13 +2,16 @@
 
 Bloccit::Application.routes.draw do
 
+  get "comments/create"
   # get "topics/index"
   # get "topics/new"
   # get "topics/show"
   # get "topics/edit"
   devise_for :users
   resources :topics do
-    resources :posts, except: [:index]
+    resources :posts, except: [:index] do
+      resources :comments, only: [:create]
+    end
   end
 
   match "about" => 'welcome#about', via: :get
@@ -22,6 +25,7 @@ end
 #####    OLD
 
 # Bloccit::Application.routes.draw do
+  # get "comments/create"
   # get "topics/index"
   # get "topics/new"
   # get "topics/show"
