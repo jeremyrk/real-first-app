@@ -25,9 +25,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # Bootstrap-sass Gem
-# gem 'bootstrap-sass', '~> 3.0.0.0.rc'
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails'
+gem 'bootstrap-sass', '~> 3.0.0.0.rc'
+# gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              #:github => 'anjlab/bootstrap-rails'
 
 # Added because not included in rails 3. ...
 gem 'protected_attributes'
