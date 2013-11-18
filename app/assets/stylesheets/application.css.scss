@@ -10,3 +10,21 @@
 .nav {
   margin-top: 5px;
 }
+
+.pagination {
+  ul {
+    list-style:none;
+    margin-left: 0;
+
+    li {
+      float:left;
+      padding: 1px 5px;
+      border: 1px solid #478ACA;
+      border-right: none;
+
+      &:last-of-type {
+        border-right: 1px solid #478ACA;
+      }
+    }
+  }
+}
