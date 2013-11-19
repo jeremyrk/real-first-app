@@ -5,9 +5,11 @@ class Post < ActiveRecord::Base
   belongs_to :topic
   attr_accessible :body, :title, :topic, :image
 
+  after_create :create_vote
+
   mount_uploader :image, ImageUploader
 
-  default_scope order('created_at DESC')
+  default_scope order('rank DESC')  # used to be 'created_at DESC' before update_rank was added below.
 
   validates :title, length: { minimum: 5 }, presence: true
   validates :body, length: { minimum: 20 }, presence: true
@@ -24,5 +26,19 @@ class Post < ActiveRecord::Base
 
   def points
     self.votes.sum(:value).to_i
+  end
+
+  def update_rank
+    age = (self.created_at - Time.new(1970,1,1,)) / 86400
+    new_rank = points + age
+
+    self.update_attribute(:rank, new_rank)
+  end
+
+private
+
+  # Who ever created a post, should automatically be set to "voting" it up.
+  def create_vote
+    self.user.votes.create(value: 1, post: self)
   end
 end
