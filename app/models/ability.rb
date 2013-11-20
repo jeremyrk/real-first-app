@@ -13,6 +13,7 @@ class Ability
       can :manage, Comment, :user_id => user.id
       can :create, Vote
       can :manage, Favorite, user_id: user.id
+      can :read, Topic
     end
 
     # Moderators can delete any post
@@ -26,7 +27,9 @@ class Ability
       can :manage, :all
     end
 
-    can :read, :all
+    #can :read, :all
+    can :read, Topic, public: true
+    can :read, Post
   end
     # Define abilities for the passed in user here. For example:
     #
