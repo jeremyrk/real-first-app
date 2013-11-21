@@ -38,8 +38,12 @@ class User < ActiveRecord::Base
   end 
 
 # will let you know if a given user has favorited a post
-def favorited(post)
-    self.favorites.where(post_id: post.id).first
+  def favorited(post)
+      self.favorites.where(post_id: post.id).first
+  end
+
+  def voted(post)
+    self.votes.where(post_id: post.id).first
   end
 
   private

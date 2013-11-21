@@ -7,7 +7,10 @@ Bloccit::Application.routes.draw do
   # get "topics/new"
   # get "topics/show"
   # get "topics/edit"
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  
+  #devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
+
   resources :topics do
     resources :posts, except: [:index] do
       resources :comments, only: [:create, :destroy]
